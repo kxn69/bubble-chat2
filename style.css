@@ -24,21 +24,21 @@ body {
     margin-left: 45px;
 }
 
-.userIcon {
-    border: 2px solid rgb(16, 78, 16);
+.userIcon {  
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    overflow: hidden;
     position: relative;
     z-index: 2;
+    border: 2px solid rgb(95, 147, 104);
 }
 
 .userIcon img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgb(16, 78, 16);
 }
 
 .userCommentIcon {
@@ -57,43 +57,39 @@ ul {
     position: relative;
 }
 
-.postBox::before {
+.userPostIcon::before {
     content: "";
     position: absolute;
-    left: 3.5%;
-    bottom: -200%;
-    height: calc(100% + 200px);
+    left: 50%;
+    height: 400px;
     width: 1px;
+    z-index: -1;
     background-color: rgb(95, 147, 104);
     transform: translateX(-50%);
 }
 
-.commentBox {
-    position: relative;
-}
-
-.commentBox:before {
+.userCommentIcon:before {
     content: "";
     position: absolute;
-    left: -1%;
+    left: -20%;
     top: 50%;
     height: 15px;
     width: 30px;
-    z-index: 0;
-    border-bottom-left-radius: 50%; 
+    z-index: -1;
+    border-bottom-left-radius: 80%; 
     background-color: rgb(95, 147, 104);
     transform: translateX(-50%) translateY(-50%);
 }
 
-.commentBox:after {
+.userCommentIcon:after {
     content: "";
     position: absolute;
-    left: -1%;
-    z-index: 0;
-    top: 49.5%;
+    left: -32%;
+    z-index: -1;
+    top: 45%;
     height: 14px;
-    width: 29px;
-    border-bottom-left-radius: 50%; 
+    width: 20px;
+    border-bottom-left-radius: 80%; 
     background-color: rgb(213, 225, 219);
     transform: translateX(-50%) translateY(-50%);
 }
@@ -186,5 +182,4 @@ i {
 i:hover {
     font-size: 20px;
     transition: ease-in-out 100ms;
-    
 }
